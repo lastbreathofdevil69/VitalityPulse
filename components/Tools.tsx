@@ -86,7 +86,7 @@ export const BMICalculator = ({
         <h3 className="text-lg font-bold text-slate-800 dark:text-white">BMI Calculator</h3>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
         <div>
           <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">Height (cm)</label>
           <input 
@@ -427,11 +427,11 @@ export const WorkoutTracker = ({
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-3 mb-6 relative z-10">
-          <div className="flex gap-3">
+          <div className="flex flex-col sm:flex-row gap-3">
               <select 
               value={type} 
               onChange={(e) => setType(e.target.value)}
-              className="flex-[2] border border-slate-200 dark:border-slate-600 rounded-xl p-3 bg-white dark:bg-slate-900 text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-orange-500 transition-shadow"
+              className="w-full sm:flex-[2] border border-slate-200 dark:border-slate-600 rounded-xl p-3 bg-white dark:bg-slate-900 text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-orange-500 transition-shadow"
               >
               <option>Running</option>
               <option>Cycling</option>
@@ -441,8 +441,9 @@ export const WorkoutTracker = ({
               <option>Swimming</option>
               </select>
               
-              <button type="submit" className="bg-orange-500 text-white p-3 rounded-xl hover:bg-orange-600 transition-colors flex items-center justify-center gap-2 px-4 font-bold shadow-md shadow-orange-100 dark:shadow-none active:scale-95">
+              <button type="submit" className="w-full sm:w-auto bg-orange-500 text-white p-3 rounded-xl hover:bg-orange-600 transition-colors flex items-center justify-center gap-2 px-4 font-bold shadow-md shadow-orange-100 dark:shadow-none active:scale-95">
                   <Plus size={20} />
+                  <span className="sm:hidden">Add Workout</span>
               </button>
           </div>
           

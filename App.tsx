@@ -59,7 +59,7 @@ const MoodTracker = ({ onSelect, currentMood }: { onSelect: (m: any) => void, cu
   return (
     <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
       <h4 className="font-bold text-slate-800 dark:text-white mb-4">How are you feeling today?</h4>
-      <div className="flex justify-between gap-2">
+      <div className="flex flex-wrap justify-between gap-2">
         {moods.map((m) => (
           <button 
             key={m.id} 
@@ -350,7 +350,7 @@ const App = () => {
       </div>
 
       {/* Main Content Grid */}
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 md:gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6">
         <div className="xl:col-span-2 bg-white dark:bg-slate-800 p-4 md:p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
             <h3 className="text-lg font-bold text-slate-800 dark:text-white mb-6">Weight History</h3>
             <WeightChart data={MOCK_WEIGHT_DATA} />
