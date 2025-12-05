@@ -94,12 +94,14 @@ const App = () => {
 
   // Dark Mode Init
   useEffect(() => {
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (localStorage.theme === 'dark') {
       setIsDarkMode(true);
       document.documentElement.classList.add('dark');
     } else {
       setIsDarkMode(false);
       document.documentElement.classList.remove('dark');
+      // Optional: Explicitly set it to light in localStorage if you want to persist the default immediately
+      // localStorage.theme = 'light'; 
     }
   }, []);
 
