@@ -1,0 +1,5 @@
+{
+  "name": "VitalityPulse - AI Fitness Tracker",
+  "description": "A comprehensive health dashboard featuring BMI calculation, workout logging, hydration tracking, and personalized AI fitness advice powered by Gemini.",
+  "requestFramePermissions": []
+}
